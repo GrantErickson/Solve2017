@@ -4,6 +4,8 @@ Code to solve the finding of number between 1 and 100 using mathmatical operatio
 The original problem statement is found here. http://mathforum.org/yeargames/
 With extended rules here: http://mathforum.org/yeargameWorksheets/2017/2017.rules.html
 
+This code was written as a C# .NET Framework console app using Visual Studio 2015.
+
 Note that this was just for fun and the code doesn't meet any particular standart aside from hopefully working. Don't use it as an example of how to write great code.
 Also, there are a number of things left intentionally commented out that are there as experiments.
 
