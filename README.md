@@ -3,6 +3,7 @@ Code to solve the finding of number between 1 and 100 using mathmatical operatio
 
 The original problem statement is found here. http://mathforum.org/yeargames/
 With extended rules here: http://mathforum.org/yeargameWorksheets/2017/2017.rules.html
+Duplicate Repo: https://github.com/IntelliTect-Samples/Solve2017
 
 This code was written as a C# .NET Framework console app using Visual Studio 2015.
 
