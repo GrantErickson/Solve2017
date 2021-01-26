@@ -11,7 +11,8 @@ namespace Solve2017
         public static Dictionary<double, string> Solve(int seed = 2017)
         {
             var start = new List<string>();
-            foreach (var num in seed.ToString()) {
+            foreach (var num in seed.ToString())
+            {
                 start.Add(int.Parse(num.ToString()).ToString());
             }
             var intermediateResults = new IntermediateResults();
@@ -39,7 +40,7 @@ namespace Solve2017
 
 
             // Generate all the Permutations
-            foreach (var nums in GetPermutations(start, start.Count))
+            foreach (var nums in GetPermutations(start))
             {
                 //Console.WriteLine(string.Join(" ", nums));
                 intermediateResults.Add(new Digits(nums));
@@ -202,14 +203,35 @@ namespace Solve2017
 
 
         // Copied from Stack Overflow
-        static IEnumerable<IEnumerable<T>> GetPermutations<T>(IEnumerable<T> list, int length)
+        public static IEnumerable<List<T>> GetPermutations<T>(List<T> list)
         {
-            if (length == 1) return list.Select(t => new T[] { t });
-
-            return GetPermutations(list, length - 1)
-                .SelectMany(t => list.Where(e => !t.Contains(e)),
-                    (t1, t2) => t1.Concat(new T[] { t2 }));
+            var result = new List<List<T>>();
+            if (list.Count() == 1)
+            {
+                result.Add(list);
+            }
+            else
+            {
+                var used = new List<T>();
+                for (int x = 0; x < list.Count(); x++)
+                {
+                    var newList = new List<T>(list);
+                    var item = newList[x];
+                    if (!used.Contains(item))
+                    {
+                        newList.RemoveAt(x);
+                        foreach (var child in GetPermutations<T>(newList))
+                        {
+                            child.Insert(0, item);
+                            result.Add(child);
+                        }
+                        used.Add(item);
+                    }
+                }
+            }
+            return result;
         }
+
 
 
         // Copied from Stack Overflow
