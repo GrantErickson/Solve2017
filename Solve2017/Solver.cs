@@ -8,10 +8,10 @@ namespace Solve2017
 {
     public class Solver
     {
-        public static Dictionary<double, string> Solve(int seed = 2017)
+        public static Dictionary<double, string> Solve(string seed = "2017")
         {
             var start = new List<string>();
-            foreach (var num in seed.ToString())
+            foreach (var num in seed)
             {
                 start.Add(int.Parse(num.ToString()).ToString());
             }
