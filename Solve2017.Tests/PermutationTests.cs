@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,7 +17,7 @@ namespace Solve2017.Tests
         {
             var list = new List<int> { 1 };
             var permutations = Solve2017.Solver.GetPermutations(list);
-            Assert.AreEqual(1, permutations.Count());
+            ClassicAssert.AreEqual(1, permutations.Count());
         }
 
         [Test]
@@ -24,7 +25,7 @@ namespace Solve2017.Tests
         {
             var list = new List<int> { 1, 2 };
             var permutations = Solve2017.Solver.GetPermutations(list);
-            Assert.AreEqual(2, permutations.Count());
+            ClassicAssert.AreEqual(2, permutations.Count());
         }
 
         [Test]
@@ -32,7 +33,7 @@ namespace Solve2017.Tests
         {
             var list = new List<int> { 1, 1 };
             var permutations = Solve2017.Solver.GetPermutations(list);
-            Assert.AreEqual(1, permutations.Count());
+            ClassicAssert.AreEqual(1, permutations.Count());
         }
 
         [Test]
@@ -40,7 +41,7 @@ namespace Solve2017.Tests
         {
             var list = new List<int> { 1, 2, 3 };
             var permutations = Solve2017.Solver.GetPermutations(list);
-            Assert.AreEqual(6, permutations.Count());
+            ClassicAssert.AreEqual(6, permutations.Count());
         }
 
         [Test]
@@ -48,7 +49,7 @@ namespace Solve2017.Tests
         {
             var list = new List<int> { 1, 2, 1 };
             var permutations = Solve2017.Solver.GetPermutations(list);
-            Assert.AreEqual(3, permutations.Count());
+            ClassicAssert.AreEqual(3, permutations.Count());
         }
 
         [Test]
@@ -56,7 +57,7 @@ namespace Solve2017.Tests
         {
             var list = new List<int> { 1, 2, 3, 4 };
             var permutations = Solve2017.Solver.GetPermutations(list);
-            Assert.AreEqual(24, permutations.Count());
+            ClassicAssert.AreEqual(24, permutations.Count());
         }
 
         [Test]
@@ -64,7 +65,7 @@ namespace Solve2017.Tests
         {
             var list = new List<int> { 1, 2, 3, 1 };
             var permutations = Solve2017.Solver.GetPermutations(list);
-            Assert.AreEqual(12, permutations.Count());
+            ClassicAssert.AreEqual(12, permutations.Count());
         }
 
         [Test]
@@ -72,7 +73,7 @@ namespace Solve2017.Tests
         {
             var list = new List<int> { 1, 2, 1, 2 };
             var permutations = Solve2017.Solver.GetPermutations(list);
-            Assert.AreEqual(6, permutations.Count());
+            ClassicAssert.AreEqual(6, permutations.Count());
         }
     }
 }

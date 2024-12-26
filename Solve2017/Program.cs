@@ -10,7 +10,7 @@ namespace Solve2017
     {
         static void Main(string[] args)
         { 
-            var result = Solver.Solve("888");
+            var result = Solver.Solve("2017");
             foreach (var kvp in result)
             {
                 Console.WriteLine($"{ kvp.Key} = { kvp.Value }");
