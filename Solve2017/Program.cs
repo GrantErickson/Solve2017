@@ -9,7 +9,9 @@ namespace Solve2017
     class Program
     {
         static void Main(string[] args)
-        { 
+        {
+            var numbers = "2017";
+            Console.WriteLine($"Finding ways to mathematically create numbers 1 through 100 with the numbers '{numbers}'.");
             var result = Solver.Solve("2017");
             foreach (var kvp in result)
             {
