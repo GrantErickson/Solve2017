@@ -18,7 +18,6 @@ namespace Solve2017
                 Console.WriteLine($"{ kvp.Key} = { kvp.Value }");
             }
             Console.WriteLine($"Total: {result.Count}");
-            Console.ReadLine();
         }
     }
 
